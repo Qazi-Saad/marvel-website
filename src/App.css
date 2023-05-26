@@ -1,38 +1,1067 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter";
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.full-container {
+  margin-top: 20px;
+  height: 750px;
+  width: 360px;
+  /* background-color: aqua; */
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+/* background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%); */
+/* background-size: cover; */
+/* position: relative; */
+
+/********************** Style for Card Component *********/
+
+.logo {
+  top: 260px;
+  left: 85px;
+}
+
+.circle {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.active-circle {
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  background-color: #ed1b24;
+  border-radius: 50%;
+}
+
+.continue-btn {
+  position: absolute;
+  width: 300px;
+  height: 45.83px;
+  left: 30px;
+  top: 614.167px;
+  background: #ed1b24;
+  border: none;
+  color: #fff;
+  font-size: 16.85px;
+  font-family: "Inter";
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background: #b4171f;
+}
+
+.para {
+  color: #fff;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.signup-btn {
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  left: 30px;
+  top: 453.75px;
+  background-color: #ed1b24;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-btn {
+  position: absolute;
+  width: 300px;
+  height: 50px;
+  left: 30px;
+  top: 528.917px;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 18px;
+  border: 3px solid #ed1b24;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.signup-btn:hover {
+  background: #b4171f;
+}
+
+.login-btn:hover {
+  background-color: #353434;
+}
+
+.heading {
+  color: #fff;
+}
+
+/******************** Signup & Login Screens *****************/
+
+.signup-screen,
+.login-screen {
+  position: relative;
+}
+
+.signup-logo,
+.login-logo,
+.logo {
+  background-image: url(./images/Marvel-Logo.png);
+  height: 78.09px;
+  width: 172.544px;
+  background-size: cover;
+  position: absolute;
+  caret-color: transparent;
+}
+
+.signup-logo,
+.login-logo {
+  top: 63.75px;
+  left: 90px;
+}
+
+.input-fields {
+  position: relative;
+  top: 186.5625px;
+  left: 30px;
+  height: 112px;
+  width: 300px;
+}
+.email-input,
+.pass-input {
+  height: 50px;
+  width: 300px;
+  border: none;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.email-input:focus,
+.pass-input:focus {
+  outline: none;
+}
+
+.email-input::placeholder,
+.pass-input::placeholder {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.show {
+  position: absolute;
+  top: 80px;
+  left: 259px;
+  font-family: "Inter";
+  font-size: 12px;
+  font-weight: 600;
+  caret-color: transparent;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.show:hover {
+  font-size: 0.8em;
+  left: 257px;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.7);
+  text-decoration-thickness: 1.5px;
+  cursor: pointer;
+}
+
+.sign-btn,
+.log-btn {
+  margin-top: 15px;
+  height: 50px;
+  width: 300px;
+  cursor: pointer;
+  background-color: #ed1b24;
+  color: #fff;
+  font-size: 18.38px;
+  font-family: "Inter";
+  font-weight: 600;
+  caret-color: transparent;
+}
+
+.sign-btn:hover,
+.log-btn:hover {
+  background-color: #b4171f;
+}
+
+.sign-btn:disabled,
+.log-btn:disabled {
+  border: 3px solid #ed1b24;
+  background-color: #000;
+}
+
+.forgot {
+  position: absolute;
+  top: 196px;
+  left: 169.5px;
+  font-family: "Inter";
+  font-weight: 800;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  caret-color: transparent;
+}
+.forgot:hover {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+  text-decoration-thickness: 1.5px;
+  cursor: pointer;
+}
+
+.or {
+  position: absolute;
+  left: 47%;
+  top: 250px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.5);
+  caret-color: transparent;
+}
+
+.continue {
+  position: absolute;
+  left: 29%;
+  top: 295px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  caret-color: transparent;
+}
+
+.fb {
+  position: absolute;
+  top: 342px;
+  left: 27px;
+  width: 120px;
+  height: 50px;
+  background: url(./images/facebook.png);
+}
+
+.google {
+  position: absolute;
+  top: 342px;
+  left: 156px;
+  width: 120px;
+  height: 50px;
+  background: url(./images/google.png);
+}
+
+.last-line {
+  position: absolute;
+  top: 430px;
+  left: 44px;
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.login-span,
+.signup-span {
+  color: #ed1b24;
+  cursor: pointer;
+}
+
+.login-span:hover,
+.signup-span:hover {
+  text-decoration: underline;
+  text-decoration-color: #ed1b24;
+  text-decoration-thickness: 1.5px;
+}
+
+/******************************** Home Page *************************************/
+
+/********* Footer Section Start ********/
+
+.footer {
+  height: 56px;
+  width: 360px;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(9px);
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: center;
+  caret-color: transparent;
+}
+
+.icons {
+  height: 39px;
+  width: 360px;
+
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon-img {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.icon-img:hover {
+  box-shadow: 0 0 6px #fff;
+  border-radius: 20%;
+}
+
+#home-img {
+  background-image: url(./home-images/home-icon.png);
+}
+
+#home-img-red {
+  background-image: url(./home-images/home-red.png);
+}
+
+#category-img {
+  background-image: url(./home-images/category-icon.png);
+}
+
+#category-img-red {
+  background-image: url(./home-images/category-red.png);
+}
+
+#download-img {
+  background-image: url(./home-images/download-icon.png);
+}
+
+#download-img-red {
+  background-image: url(./home-images/download-red.png);
+}
+
+#more-img {
+  background-image: url(./home-images/more-icon.png);
+}
+
+#more-img-red {
+  background-image: url(./home-images/more-red.png);
+}
+
+.icon-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.name {
+  font-family: "Inter";
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#home-red,
+#category-red,
+#download-red,
+#more-red {
+  color: #ed1b24;
 }
+
+/********* Footer Section End ********/
+
+/********* Header Section Start ********/
+
+.header {
+  height: 113px;
+  width: 360px;
+
+  position: absolute;
+  top: 0px;
+  caret-color: transparent;
+}
+
+.home-logo {
+  background-image: url(./home-images/Marvel-Logo.png);
+  width: 100px;
+  height: 45.26px;
+  position: absolute;
+  top: 44px;
+  left: 130px;
+}
+
+.avatar-img {
+  background-image: url(./home-images/Avatar.png);
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 33px;
+  right: 16px;
+}
+
+/********* Header Section End ********/
+
+/********* Main Section Start ********/
+
+.main-div {
+  position: absolute;
+
+  width: 360px;
+  top: 113px;
+  bottom: 0px;
+  caret-color: transparent;
+  overflow-y: scroll;
+}
+
+.main-div::-webkit-scrollbar {
+  display: none;
+}
+
+.home-headings {
+  font-family: "Inter";
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  margin-left: 12px;
+}
+
+.home-carousel-container {
+  height: 173px;
+  width: 360px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.trending-carousel-container {
+  height: 150px;
+  width: 352px;
+
+  margin-left: 8px;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+.section {
+  margin-bottom: 24px;
+}
+
+/********* Main Section End ********/
+
+/************************** Carousel Component Starts *****************************/
+
+.btn {
+  height: 42px;
+  width: 20px;
+  color: #ffffffe5;
+  font-size: 55px;
+  font-weight: bolder;
+
+  z-index: 1;
+  top: 62px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+}
+.btn:hover {
+  color: #fff;
+  font-size: 4.5em;
+}
+
+.right-btn {
+  right: 3px;
+}
+
+.left-btn {
+  left: 3px;
+}
+
+/************************** Carousel Component Ends *****************************/
+
+/************************** Trending Carousel Starts *****************************/
+
+.trend-carousel {
+  height: 150px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  position: relative;
+}
+
+.trend-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-img {
+  height: 150px;
+  width: 100px;
+  margin-right: 12px;
+}
+
+.trend-btn {
+  height: 42px;
+  width: 20px;
+  color: #ffffffe5;
+  font-size: 55px;
+  font-weight: bolder;
+
+  z-index: 1;
+  bottom: 62px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+}
+
+.trend-btn:hover {
+  color: #fff;
+  font-size: 4.5em;
+}
+
+.lBtn {
+  left: 3px;
+}
+
+.rBtn {
+  left: 318px;
+}
+/************************** Trending Carousel Ends *****************************/
+
+/************************** Watch Page Starts *****************************/
+
+.img-box {
+  height: 475px;
+  width: 360px;
+  caret-color: transparent;
+  position: relative;
+}
+
+.back-arrow {
+  background-image: url(./watch-page-images/Back.png);
+  position: absolute;
+  top: 22px;
+  left: 12px;
+  height: 24px;
+  width: 31px;
+  cursor: pointer;
+}
+
+.back-arrow:hover {
+  box-shadow: 0 0 6px #fff;
+  border-radius: 20%;
+}
+
+.play {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 140px;
+  bottom: 12px;
+  background-image: url(./watch-page-images/arrow-circle-right.png);
+  cursor: pointer;
+}
+
+.img-heading {
+  position: absolute;
+  height: 48px;
+  width: 233px;
+  left: 64px;
+  top: 56px;
+  color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.watch-pages {
+  width: 360px;
+  height: 750px;
+  overflow-y: scroll;
+  caret-color: transparent;
+}
+
+.watch-pages::-webkit-scrollbar {
+  display: none;
+}
+
+/************************** Watch Page Ends *****************************/
+
+/************************** Info Starts *****************************/
+
+.info-section {
+  width: 360px;
+  height: auto;
+  position: relative;
+}
+
+.dwn-btn {
+  position: absolute;
+  width: 150px;
+  height: 45px;
+  left: 16px;
+  top: 15px;
+  border: 3px solid #ed1b24;
+  background-color: #000;
+  color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18.3821px;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-to-watch {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  position: absolute;
+  width: 140px;
+  height: 24px;
+  right: 16px;
+  top: 28px;
+  cursor: pointer;
+}
+
+.text-box {
+  position: absolute;
+  width: 336px;
+  height: 92px;
+  left: 12px;
+  top: 72px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fff;
+}
+
+.btn-div {
+  position: absolute;
+  left: 0px;
+  top: 171px;
+  height: 35px;
+  width: 360px;
+  display: flex;
+
+  position: absolute;
+}
+
+.three-btn {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: inset 1px 0px 0px rgba(255, 255, 255, 0.25);
+  width: 120px;
+  color: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.three-btn:hover {
+  background-color: rgba(255, 255, 255, 0.19);
+}
+
+.three-btn:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-bottom: 3px solid #ed1b24;
+}
+
+/************************** Trailer *****************************/
+
+.content-div {
+  position: absolute;
+  top: 220px;
+  left: 16px;
+  height: auto;
+  width: 336px;
+}
+
+.trailer-img {
+  width: 328px;
+  height: 223px;
+}
+
+.play-trailer {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 130px;
+  top: 84px;
+  background-image: url(./trailer-image/play-btn.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+/************************** Cast *****************************/
+
+.cast-container {
+  display: flex;
+
+  margin-bottom: 12px;
+  height: 150px;
+}
+
+.cast-img-div {
+  margin-right: 11px;
+}
+
+.cast-img {
+  height: 150px;
+  width: 120px;
+  user-select: none;
+}
+
+.name-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+
+  height: 60px;
+  width: 190px;
+}
+
+.real-name {
+  height: 24px;
+  width: 200px;
+
+  margin-bottom: 5px;
+  color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.stage-name {
+  height: 24px;
+  width: 190px;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/************************** More *****************************/
+
+.more-container {
+  display: flex;
+  height: 185px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.more-container:last-child {
+  border: none;
+  margin-bottom: 0px;
+}
+
+.more-img-div {
+  margin-right: 20px;
+}
+
+.more-img {
+  height: 170px;
+  width: 110px;
+  user-select: none;
+}
+
+.details-div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  height: 130px;
+  width: 180px;
+}
+
+.movie-name {
+  width: 130px;
+  height: 72px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.release-date {
+  height: 24px;
+  width: 130px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+/************************** Info Ends *****************************/
+
+/************************** Category Starts *****************************/
+
+.category-page {
+  caret-color: transparent;
+}
+
+.category-head {
+  height: 40px;
+  width: 360px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.cat-btn {
+  width: 180px;
+  height: 40px;
+  background-color: #000;
+  border: 1px solid #ed1b24;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cat-btn:focus {
+  background-color: #ed1b24;
+}
+
+.category-main {
+  width: 326px;
+  height: 650px;
+  margin-left: 17px;
+  overflow-y: scroll;
+}
+
+.category-main::-webkit-scrollbar {
+  display: none;
+}
+
+.grid-m {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 160px);
+  gap: 10px;
+}
+
+.grid-s {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 160px);
+  gap: 10px;
+}
+
+.blank {
+  width: 340px;
+  height: 100px;
+}
+
+/************************** Category Ends *****************************/
+
+/************************** Download Starts *****************************/
+
+.download-page {
+  caret-color: transparent;
+}
+
+.download-main {
+  position: absolute;
+  top: 150px;
+  width: 360px;
+  height: 500px;
+}
+
+.dwn-heading {
+  width: 360px;
+  height: 40px;
+  background-color: #ed1b24;
+  color: #fff;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.dwn-img-cont {
+  margin-left: 16px;
+  width: 328px;
+}
+
+.dwn-img-div {
+  width: 328px;
+  height: 130px;
+  margin-bottom: 12px;
+  background-color: rgba(217, 217, 217, 0.1);
+  cursor: pointer;
+  display: flex;
+}
+
+.dwn-img {
+  height: 130px;
+  width: 95px;
+  margin-right: 12px;
+  user-select: none;
+}
+
+.dwn-title {
+  margin-top: 16px;
+  width: 180px;
+  height: 60px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+/************************** Download Ends *****************************/
+
+/************************** More Page Starts *****************************/
+
+.more-page {
+  caret-color: transparent;
+}
+
+.more-header {
+  position: absolute;
+  left: 50px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.large-img {
+  width: 260px;
+  height: 260px;
+  background-image: url(./home-images/profile-image.png);
+  margin-bottom: 10px;
+}
+
+.user-name {
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.more-main-div {
+  position: absolute;
+  top: 335px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+.options-div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 28px;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.option-arrow {
+  background-image: url(./home-images/arrow-right.png);
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+.option-name {
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.sign-out-div {
+  height: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#sign-out:hover {
+  text-decoration: underline;
+}
+/************************** More Page Ends *****************************/
